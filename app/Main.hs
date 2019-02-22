@@ -20,7 +20,7 @@ main = do
   let t1 = textbox_ "value" "abc"
   suavementely
     [ ("test-maybe", SomeSuave (markupTest "A Suave (Maybe String)") $
-          maybeInput "show" True t1)
+          maybeInput "show" True "wrap" t1)
     , ("test-text", SomeSuave (markupTest "Just a wrapped textbox") $
           div' "wrap" "" t1)
     , ("example", SomeSuave sendDiagram example)
