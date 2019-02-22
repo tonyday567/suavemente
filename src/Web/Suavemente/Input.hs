@@ -282,8 +282,8 @@ div' cl st = markupF (\x ->
 display :: Bool -> String
 display b = "display:" ++ bool "none" "block" b
 
-maybeInput :: String -> Bool -> Suave a -> Suave (Maybe a)
-maybeInput label start sa = do
-  a <- div' "wrap" (display start) sa
-  c <- checkboxShow label "wrap" start
+maybeInput :: String -> Bool -> String -> Suave a -> Suave (Maybe a)
+maybeInput label start cl sa = do
+  a <- div' cl (display start) sa
+  c <- checkboxShow label cl start
   pure (bool Nothing (Just a) c)
