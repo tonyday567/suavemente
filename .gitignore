@@ -2,3 +2,4 @@
 suavemente.cabal
 *~
 .stack-prof/
+.DS_Store
